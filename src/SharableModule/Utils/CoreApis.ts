@@ -1,6 +1,6 @@
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
 
-const get = async (urlPaths: string) => {
-    return fetch(`${BASE_URL}/${urlPaths}`).then(result => result.json());
+const get = (urlPaths: string) => {
+    return fetch(`${BASE_URL}/${urlPaths}`);
 };
 export default get;

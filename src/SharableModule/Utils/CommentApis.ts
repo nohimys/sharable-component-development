@@ -1,13 +1,13 @@
 import get from "./CoreApis";
+import IComment from "../Modals/IComment";
 
 const CommentApis = {
     getCommentById: async (id: number) => {
-        const result = await get(`comments/${id}`);
-        return result;
+        return  await get(`comments/${id}`).then(result => result.json());
     },
-    getCommentsByPostId: async (postId: number) => {
-        const result = await get(`comments?postId=${postId}`);
-        return result;
+    getCommentsByPostId: async (postId: number): Promise<IComment[]> => {
+        return await get(`comments?postId=${postId}`).then(result => result.json());
+
     }
 };
 export default CommentApis;
