@@ -1,6 +1,5 @@
 import Comments from "../SharableModule/BadDesign/Comments";
 
-
 const DemoPageComponent = () => {
 
     const badDeSignComponents = () => {
