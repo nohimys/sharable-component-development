@@ -9,7 +9,8 @@ import {useEffect, useState} from "react";
 
 interface IComments {
     requirementId: number;
-    postOrCommentId: number
+    contextId: number;
+    contextType: ('POST' | 'COMMENT');
 }
 
 const Comments = (props: IComments) => {
@@ -19,7 +20,7 @@ const Comments = (props: IComments) => {
     const getListItem = (item: IComment) => {
         return (
             <div key={item.id}>
-                <ListItem alignItems="flex-start">
+                <ListItem alignItems="flex-start" >
                     <ListItemText
                         primary={item.name}
                         secondary={
@@ -59,11 +60,11 @@ const Comments = (props: IComments) => {
 
     useEffect(() => {
         CommentApis
-            .getCommentsByPostId(props.postOrCommentId)
+            .getCommentsByPostId(props.contextId)
             .then(result => {
                 setCommentsList(result);
             });
-    }, [props.postOrCommentId]);
+    }, [props.contextId, props.contextType]);
 
     return (
         <div style={{margin: 'auto', width:'40%'}}>

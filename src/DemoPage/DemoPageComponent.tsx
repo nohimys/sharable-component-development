@@ -9,7 +9,8 @@ const DemoPageComponent = () => {
                     <h4> Client Requirement 1</h4>
                     <Comments
                         requirementId={1}
-                        postOrCommentId={1}
+                        contextId={1}
+                        contextType={'COMMENT'}
                     />
                 </div>
 
@@ -17,7 +18,8 @@ const DemoPageComponent = () => {
                     <h4> Client Requirement 2</h4>
                     <Comments
                         requirementId={2}
-                        postOrCommentId={1}
+                        contextId={1}
+                        contextType={'POST'}
                     />
                 </div>
 
@@ -25,7 +27,8 @@ const DemoPageComponent = () => {
                     <h4> Client Requirement 3</h4>
                     <Comments
                         requirementId={3}
-                        postOrCommentId={1}
+                        contextId={1}
+                        contextType={'POST'}
                     />
                 </div>
             </>
