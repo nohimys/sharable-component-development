@@ -38,11 +38,8 @@ const Comments = (props: IComments) => {
         return (
             <div key={item.id}>
                 <ListItem alignItems="flex-start">
-                    <Typography
-                        color={fontColor}
-                    >
                         <ListItemText
-                            primary={nameOrEmail}
+                            primary={<Typography variant="body2" style={{ color: fontColor }}>{nameOrEmail}</Typography>}
                             secondary={
                                 <React.Fragment>
                                     <Typography
@@ -56,7 +53,7 @@ const Comments = (props: IComments) => {
                                 </React.Fragment>
                             }
                         />
-                    </Typography>
+
                 </ListItem>
                 <Divider variant="inset" component="li"/>
             </div>
