@@ -94,7 +94,6 @@ const Comments = (props: IComments) => {
 
     return (
         <div style={{margin: 'auto', width: '40%'}}>
-            <h6>Comments</h6>
             {getCommentsList()}
         </div>
     );
