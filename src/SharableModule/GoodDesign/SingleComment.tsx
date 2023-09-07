@@ -29,7 +29,13 @@ const SingleComment = (props: ICommentList) => {
         <div key={props.id}>
             <ListItem alignItems="flex-start">
                 <ListItemText
-                    primary={<Typography variant="body2" style={{ color: props.fontColour }}>{getDisplayLabel()}</Typography>}
+                    primary={
+                    <Typography
+                        variant="body2"
+                        style={{ color: props.fontColour }}
+                    >{
+                        getDisplayLabel()}
+                    </Typography>}
                     secondary={
                         <React.Fragment>
                             <Typography
